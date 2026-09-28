@@ -1,0 +1,158 @@
+{
+  "slide_size": "16:9",
+  "slides": [
+    {
+      "layout": "title",
+      "background": "0A1128",
+      "title": "NextPlay Kids",
+      "subtitle": "Every child deserves a place to play.\nYouth sports commerce, programs & safety — ages 2 to 17.\nInvestor Brief · September 2026 · Mumbai",
+      "notes": "Open with the mission: we are building the trusted sports layer for India's 350M+ children. One line: we make sports safer, more accessible and development-focused for ages 2-17, through gear, programs and technology."
+    },
+    {
+      "layout": "title_content",
+      "background": "0A1128",
+      "title": "The Problem",
+      "bullets": [
+        {"level": 0, "text": "Parents cannot trust what they buy", "size": 20, "bold": true},
+        {"level": 1, "text": "Adult-sized gear sold to children; no honest age ranges; 60%+ of youth sports gear is sized wrongly (industry estimate)", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Sports drop-off is massive — and expensive", "size": 20, "bold": true},
+        {"level": 1, "text": "70% of kids quit organised sport by age 13 (Aspen Institute). Pressure culture, wrong equipment, boring first experiences.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "No trusted marketplace for ages 2-17", "size": 20, "bold": true},
+        {"level": 1, "text": "General sports retailers sell adult gear smaller; nobody owns the child-development layer: right gear, right age, right challenge.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Schools & academies run on spreadsheets", "size": 20, "bold": true},
+        {"level": 1, "text": "Rosters, attendance, parent messaging and equipment inventory are manual, unsafe and unprofitable.", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Frame the wedge: parents don't have a trusted, age-appropriate sports partner. Retailers sell products; nobody sells development. The safety gap is the trust wedge — we win parents before we sell them."
+    },
+    {
+      "layout": "title_content",
+      "background": "0C1322",
+      "title": "The Market",
+      "bullets": [
+        {"level": 0, "text": "India youth sports economy — large, fragmented, under-served", "size": 20, "bold": true},
+        {"level": 1, "text": "Sports goods market: ~$4B+ and growing double-digit; youth segment under-penetrated", "size": 15, "color": "C7CDD8"},
+        {"level": 1, "text": "350M+ children aged 2-17; rising middle-class spend on child development", "size": 15, "color": "C7CDD8"},
+        {"level": 1, "text": "Government push: Khelo India, school sport mandates, NEP physical education", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Revenue lines (multiple engines, one brand)", "size": 20, "bold": true},
+        {"level": 1, "text": "1. Gear e-commerce (AOV ₹1,800-4,500)  2. Programs & camps (₹4k-25k/term)  3. School & academy B2B bundles  4. SaaS dashboards  5. Digital products", "size": 15, "color": "C7CDD8"},
+        {"level": 1, "text": "Global reference: Decathlon youth line, Dick's Sporting Goods youth — none own the full child-development stack in India", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Anchor: this is not a toy shop, it's the development layer. Multiple revenue engines de-risk: retail margins day one, programs build LTV, B2B builds stickiness, SaaS builds moat."
+    },
+    {
+      "layout": "title_content",
+      "background": "0A1128",
+      "title": "The Product — Trust by Design",
+      "bullets": [
+        {"level": 0, "text": "Safety-first commerce", "size": 19, "bold": true},
+        {"level": 1, "text": "Every product: honest age range, safety certification badge, size-true charts, fit guides co-written with paediatric physiotherapists, free size exchanges", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Sports Explorer — the recommendation engine", "size": 19, "bold": true},
+        {"level": 1, "text": "Interactive quiz (age, interests, time, budget, accessibility) → matched sport + starter bundle. Acquisition engine disguised as a service.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Parent Dashboard & Coach Dashboard", "size": 19, "bold": true},
+        {"level": 1, "text": "Child profiles, progress tracking with parental-consent controls, coach messaging, attendance & inventory — parents are account holders, always.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Live prototype already shipped", "size": 19, "bold": true},
+        {"level": 1, "text": "16-page experience live at maheshkoriacourse.github.io/nextplay-kids — 45-product catalogue, filters, cart, dashboards. Working proof, not slides.", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Demo the live site here if internet allows. Emphasize: parents-as-account-holders is a moat — trust compounds, and no competitor treats child data with this discipline."
+    },
+    {
+      "layout": "title_content",
+      "background": "0C1322",
+      "title": "Why We Win",
+      "bullets": [
+        {"level": 0, "text": "1. Trust layer — safety certification on 100% of catalogue, fit-first commerce", "size": 18, "bold": true},
+        {"level": 1, "text": "Parents switch brands over safety mistakes; they never leave a brand that prevented them", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "2. Age-graded everything — 2-4, 5-7, 8-11, 12-14, 15-17 product & program ladders", "size": 18, "bold": true},
+        {"level": 1, "text": "A child who enters at 4 grows with us for 15 years — highest LTV story in Indian retail", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "3. Inclusive by architecture — adaptive sport woven through every category", "size": 18, "bold": true},
+        {"level": 1, "text": "Untapped segment; schools and parents actively searching for it", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "4. Founder-market fit", "size": 18, "bold": true},
+        {"level": 1, "text": "19+ years BFSI operations & data leadership + AI architecture. Distribution discipline of a banker, product speed of a builder.", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "The LTV ladder is the killer argument: a child at age 4 can be a customer through age 17 — 13 years of gear, programs, camps. No other Indian sports brand owns childhood this completely."
+    },
+    {
+      "layout": "title_content",
+      "background": "0A1128",
+      "title": "Business Model",
+      "bullets": [
+        {"level": 0, "text": "Revenue streams", "size": 19, "bold": true},
+        {"level": 1, "text": "Retail margin 30-45% on gear · Program fees ₹4k-25k per term · B2B school bundles (₹50k-5L contracts) · SaaS ₹500-2k/seat/month · Birthday & event services", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Unit economics (target at scale)", "size": 19, "bold": true},
+        {"level": 1, "text": "Blended gross margin ~38% · CAC via parents-community + schools (low paid-media dependence) · Repeat: gear re-orders as children grow + term renewals", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "LTV engine", "size": 19, "bold": true},
+        {"level": 1, "text": "A child acquired at 7 through a ₹2,500 starter kit can generate ₹1.5L-3L lifetime value over a decade (gear + programs).", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Keep it honest: these are targets, not audited numbers. The structural point is the ladder — gear is the acquisition product, programs are the retention engine, SaaS is the margin engine."
+    },
+    {
+      "layout": "title_only",
+      "background": "0C1322",
+      "title": "5-Year Path to Scale",
+      "charts": [
+        {
+          "type": "bar",
+          "title": "Revenue trajectory (₹ crore, indicative plan)",
+          "categories": ["Yr 1", "Yr 2", "Yr 3", "Yr 4", "Yr 5"],
+          "series": {"Revenue (₹ Cr)": [1.2, 6.0, 18.0, 42.0, 85.0]}
+        }
+      ],
+      "notes": "Yr1: Mumbai-first, prove repeat purchase + term renewals. Yr2-3: 5 cities + 100 schools. Yr4-5: national franchise-style expansion + SaaS across academies. Numbers are a working plan, not a promise — say that out loud to investors."
+    },
+    {
+      "layout": "title_content",
+      "background": "0A1128",
+      "title": "Go-To-Market",
+      "bullets": [
+        {"level": 0, "text": "Phase 1 (0-12 months) — Mumbai beachhead", "size": 18, "bold": true},
+        {"level": 1, "text": "Shopify-style D2C launch + 3 academy partnerships + 2 school contracts. Target: 5,000 orders, ₹1.2 Cr GMV.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Growth loops, not paid-media dependence", "size": 18, "bold": true},
+        {"level": 1, "text": "Sports Explorer quiz (SEO magnet) → starter bundles → programs → word-of-mouth parent communities → school referrals back to retail.", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Content flywheel", "size": 18, "bold": true},
+        {"level": 1, "text": "AI-video channel: safety guides, skill drills, child-athlete stories — built on our in-house AI film pipeline (canon-controlled production, near-zero content cost).", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "B2B wedge", "size": 18, "bold": true},
+        {"level": 1, "text": "Schools buy bundles for compliance + safety documentation; we upskill their coaches and own the relationship.", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "The AI-video content engine is the founder's unfair advantage — this team can produce studio-grade content at software cost. Mention the filmcraft studio capability."
+    },
+    {
+      "layout": "title_content",
+      "background": "0C1322",
+      "title": "Technology & Data Moat",
+      "bullets": [
+        {"level": 0, "text": "Age-graded recommendation engine — every sale teaches the system", "size": 18, "bold": true},
+        {"level": 1, "text": "Fit data (height, sport, size outcomes) compounds into India's best youth sizing dataset", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Progress tracking with parental consent = retention machine", "size": 18, "bold": true},
+        {"level": 1, "text": "Families stay for the growth record, not just the gear", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Coach SaaS creates network lock-in", "size": 18, "bold": true},
+        {"level": 1, "text": "Academies run attendance, rosters, inventory on our stack — switching is costly", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "AI content pipeline in-house", "size": 18, "bold": true},
+        {"level": 1, "text": "Studio-grade video production capability — marketing cost advantage competitors can't match", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Investors hear 'data moat' too often — make it concrete: every exchanged jersey tells us a child grew 4cm. In 3 years we know fit better than any competitor in the country."
+    },
+    {
+      "layout": "title_content",
+      "background": "0A1128",
+      "title": "The Ask",
+      "bullets": [
+        {"level": 0, "text": "Raising: ₹3.5 Cr seed round (18-month runway)", "size": 22, "bold": true},
+        {"level": 1, "text": "40% Inventory & retail infrastructure · 25% Technology (dashboards, quiz engine, apps) · 20% Programs & coaching network · 15% Brand & growth", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "18-month milestones", "size": 22, "bold": true},
+        {"level": 1, "text": "₹1.2 Cr GMV · 5,000 families · 3 academies + 2 schools signed · repeat-purchase rate 35%+ · SaaS pilot with 10 academies", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "Round structure", "size": 22, "bold": true},
+        {"level": 1, "text": "SAFE / CCPS · founder-led with governance-ready reporting from day one", "size": 15, "color": "C7CDD8"},
+        {"level": 0, "text": "What you get", "size": 22, "bold": true},
+        {"level": 1, "text": "Early entry into the trust-layer of a ₹40,000 Cr+ market, with a founder who has managed 9-figure P&Ls and ships working product in weeks, not quarters.", "size": 15, "color": "C7CDD8"}
+      ],
+      "notes": "Be direct on the number and the milestones. Invite diligence: prototype is live, security-audited stack, weekly backup discipline. Close with the mission line."
+    },
+    {
+      "layout": "title",
+      "background": "0A1128",
+      "title": "Every child deserves a place to play.",
+      "subtitle": "Mahesh Koria · Founder · NextPlay Kids\n19+ years banking & data leadership · AI architecture (67-day executive curriculum)\nLet's build India's most trusted youth-sport company — together.\n\nContact: pitch deck appendix available on request",
+      "notes": "End with confidence, not desperation. One-liner: we are not selling products, we are building the trust layer of Indian youth sport. Q&A."
+    }
+  ]
+}
