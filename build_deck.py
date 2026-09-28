@@ -147,16 +147,15 @@ def bullets(slide, l, t, w, items, size=14.5, gap=8):
 # ================= SLIDE 1 — TITLE =================
 s = prs.slides.add_slide(prs.slide_layouts[6])
 bg(s, NAVY)
-# backdrop shapes
-box(s, -1.2, -1.6, 6.2, 4.4, fill=NAVY2, radius=True)
-ball = s.shapes.add_shape(1, Inches(9.2), Inches(-1.4), Inches(6.4), Inches(6.4))  # oval
-ball.fill.solid(); ball.fill.fore_color.rgb = NAVY2; ball.line.fill.background(); ball.shadow.inherit = False
+# right-half full-bleed action photo: kids playing football, sweat, golden hour
+pic = s.shapes.add_picture("/home/maheshkoria/nextplay-kids/img/hero-football-ppt.jpg",
+                           Inches(7.35), Inches(0.0), Inches(5.983), Inches(4.9))
 text(s, 0.7, 0.85, 6, 0.4, "NEXTPLAY KIDS  ·  INVESTOR BRIEF  ·  SEPT 2026", size=12.5, color=GREEN, bold=True)
-text(s, 0.65, 1.55, 11.6, 1.7, [[("Every child deserves", {"color": WHITE})],
-                                 [("a place to play.", {"color": GREEN})]], size=48, bold=True, spacing=1.02)
-text(s, 0.7, 3.62, 9.2, 1.0,
+text(s, 0.65, 1.55, 6.5, 2.4, [[("Every child deserves", {"color": WHITE})],
+                               [("a place to play.", {"color": GREEN})]], size=40, bold=True, spacing=1.05)
+text(s, 0.7, 3.62, 6.3, 1.2,
      "Youth sports commerce, programs and safety — for India's 350 million children, ages 2 to 17.",
-     size=17, color=GREY, spacing=1.25)
+     size=15.5, color=GREY, spacing=1.25)
 # KPI row
 kpis = [("350M+", "children in India"), ("₹4B+", "sports goods market"),
         ("19", "sports on platform"), ("Live", "prototype shipped")]
@@ -328,15 +327,19 @@ card(s, 7.1, 3.7, 5.5, 2.6, "What you get",
 
 # ================= SLIDE 11 — CLOSE =================
 s = prs.slides.add_slide(prs.slide_layouts[6]); bg(s, NAVY)
-box(s, -1.4, 4.6, 16, 4.6, fill=NAVY2, radius=False)
-text(s, 0.9, 2.0, 11.5, 1.9, [[("Every child deserves", {"color": WHITE}),],
+# dojo sparring photo band across the bottom
+s.shapes.add_picture("/home/maheshkoria/nextplay-kids/img/dojo-close.jpg",
+                     Inches(0.0), Inches(4.42), Inches(13.333), Inches(3.08))
+# gradient-style scrim over photo top edge for text legibility
+box(s, 0.0, 4.42, 13.333, 0.5, fill=NAVY, radius=False)
+text(s, 0.9, 1.4, 11.5, 1.9, [[("Every child deserves", {"color": WHITE}),],
                               [("a place to play.", {"color": GREEN})]], size=44, bold=True, spacing=1.04)
-text(s, 0.9, 4.35, 11, 1.6,
+text(s, 0.9, 3.35, 11, 1.0,
      [[("Mahesh Koria", {"color": WHITE, "bold": True, "size": 16})],
       [("Founder · NextPlay Kids — 19+ years banking & data leadership, AI architecture", {"color": GREY, "size": 13})],
       [("Let's build India's most trusted youth-sport company — together.", {"color": ORANGE, "size": 14, "bold": True})]],
      spacing=1.25, space_after=4)
-text(s, 0.9, 6.85, 11, 0.35, "NextPlay Kids · Investor Brief · September 2026 · Mumbai",
+text(s, 0.9, 7.05, 11, 0.35, "NextPlay Kids · Investor Brief · September 2026 · Mumbai",
      size=10, color=DIM)
 
 OUT = "/home/maheshkoria/nextplay-kids/NextPlay-Kids-Investor-Pitch.pptx"
