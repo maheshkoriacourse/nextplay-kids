@@ -14,13 +14,12 @@
   function insert(table, row) {
     return fetch(URL + '/rest/v1/' + table, {
       method: 'POST',
-      headers: headers({ Prefer: 'return=representation' }),
+      // Prefer minimal: anon role has INSERT-only policy; representation read needs a SELECT policy we don't grant
+      headers: headers({ Prefer: 'return=minimal' }),
       body: JSON.stringify(row)
     }).then(function (r) {
-      return r.json().then(function (data) {
-        if (!r.ok) throw new Error((data && data.message) || ('HTTP ' + r.status));
-        return data;
-      });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return true;
     });
   }
 
