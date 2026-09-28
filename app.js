@@ -85,7 +85,7 @@
         '<div class="social-row">' +
         '<a href="#" aria-label="NextPlay on Instagram">📸</a><a href="#" aria-label="NextPlay on YouTube">▶️</a>' +
         '<a href="#" aria-label="NextPlay on WhatsApp">💬</a><a href="#" aria-label="NextPlay on Facebook">📘</a></div></div>' +
-        '<div><h4>Shop</h4><a href="shop.html">Shop All</a><a href="shop.html?cat=G">Programs</a><a href="ages.html">Shop by Age</a><a href="shop.html?filter=sport&amp;v=Swimming">Swimming</a><a href="shop.html?filter=sport&amp;v=Football">Football</a><a href="camps.html">Camps &amp; Events</a></div>' +
+        '<div><h4>Shop</h4><a href="shop.html">Shop All</a><a href="shop.html?cat=G">Programs</a><a href="ages.html">Shop by Age</a><a href="shop.html?sport=Swimming">Swimming</a><a href="shop.html?sport=Football">Football</a><a href="camps.html">Camps &amp; Events</a></div>' +
         '<div><h4>Support</h4><a href="contact.html">Contact &amp; Help</a><a href="safety.html">Safety &amp; Sizing</a><a href="safety.html#returns">Returns &amp; Exchanges</a><a href="cart.html">Your Cart</a><a href="dashboard-parent.html">Parent Dashboard</a><a href="dashboard-coach.html">Coach Portal</a></div>' +
         '<div><h4>Trust &amp; Legal</h4><a href="privacy.html">Privacy Policy</a><a href="child-safety.html">Child Safety Policy</a><a href="about.html">About NextPlay</a><a href="schools.html">School Partnerships</a><a href="about.html#accessibility">Inclusive Sport</a></div>' +
         '</div><div class="footer-base">' +

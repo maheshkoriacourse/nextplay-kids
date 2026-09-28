@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Product — NextPlay Kids</title>
 <meta name="description" content="Safety-certified kids sports equipment with true-to-age sizing, fit guidance and parent reviews.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://maheshkoriacourse.github.io/nextplay-kids/product.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cinema.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<script>
+try{var t=localStorage.getItem('np_theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="np-glow" aria-hidden="true"></div>
+<div class="np-progress" aria-hidden="true"><i></i></div>
 <header id="site-header" class="site-header"></header>
-<main id="main" class="section" style="padding-top:48px">
+<main id="main" class="section" style="padding-top:0">
+<div class="np-page-head">
 <div class="container">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <a href="shop.html">Shop</a> <span aria-hidden="true">/</span> <a href="shop.html" id="pd-crumb-sport">Sport</a></nav>
+</div>
+</div>
+<div class="container">
   <div class="pd-layout">
     <div class="pd-gallery">
-      <div class="pd-main-img load-in" id="pd-main" role="img" aria-label="Product image"><span aria-hidden="true">⚡</span></div>
-      <div class="pd-thumbs" id="pd-thumbs"></div>
+      <div class="pd-main-img np-main-img load-in" id="pd-main" role="img" aria-label="Product image"><span aria-hidden="true">⚡</span></div>
+      <div class="pd-thumbs np-thumbs" id="pd-thumbs"></div>
     </div>
     <div>
       <div class="p-meta" id="pd-cat" style="font-size:.82rem">Loading…</div>
@@ -42,7 +54,7 @@
       </div>
       <div class="safety-box" id="pd-safety"></div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
-        <button class="btn" id="pd-add" style="flex:1;min-width:180px">Add to Cart</button>
+        <button class="btn" id="pd-add" data-add style="flex:1;min-width:180px">Add to Cart</button>
         <button class="btn btn-orange" id="pd-buy" style="flex:1;min-width:160px">Buy Now ⚡</button>
       </div>
       <div class="meta-row" style="margin-top:20px">
@@ -55,20 +67,46 @@
   </div>
 
   <section class="section" id="pd-reviews-sec">
-    <div class="section-head reveal"><span class="eyebrow">From other parents</span><h2>Reviews</h2></div>
+    <div class="np-sec-head reveal"><span class="np-ch"><b>Reviews</b> From other parents</span><h2>Parent reviews</h2></div>
     <div class="grid-2" id="pd-reviews" style="grid-template-columns:1fr 1fr;max-width:900px"></div>
   </section>
 
   <section class="section section-alt" style="border-radius:24px;padding:48px 32px">
-    <div class="section-head reveal"><span class="eyebrow">Goes well with</span><h2>Related gear</h2></div>
+    <div class="np-sec-head reveal"><span class="np-ch"><b>Goes well with</b> Complete the kit</span><h2>Related gear</h2></div>
     <div class="grid-4" id="pd-related" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))" data-stagger></div>
   </section>
 </div>
 </main>
 <footer id="site-footer" class="site-footer"></footer>
 <button class="back-top" aria-label="Back to top">↑</button>
+<div class="np-buybar" aria-hidden="true">
+  <div class="np-bb-info"><b id="pd-bb-name">Product</b><span id="pd-bb-price">₹—</span></div>
+  <button class="btn btn-sm" id="pd-bb-add" data-add>Add to Cart</button>
+</div>
 <script src="data.js"></script>
 <script src="app.js"></script>
 <script src="shop.js"></script>
+<script src="cinema.js"></script>
+<script>
+/* mirror product identity into the sticky buy bar (cinema.js shows it after hero) */
+document.addEventListener('DOMContentLoaded', function(){
+  var tryFill = function(){
+    var n = document.getElementById('pd-name'), p = document.getElementById('pd-price');
+    var bn = document.getElementById('pd-bb-name'), bp = document.getElementById('pd-bb-price');
+    if (n && p && bn && bp && n.textContent !== 'Product') {
+      bn.textContent = n.textContent;
+      bp.textContent = p.textContent;
+      return true;
+    }
+    return false;
+  };
+  if (!tryFill()) {
+    var iv = setInterval(function(){ if (tryFill()) clearInterval(iv); }, 120);
+    setTimeout(function(){ clearInterval(iv); }, 3000);
+  }
+  var bbAdd = document.getElementById('pd-bb-add'), add = document.getElementById('pd-add');
+  if (bbAdd && add) bbAdd.addEventListener('click', function(){ add.click(); });
+});
+</script>
 </body>
 </html>

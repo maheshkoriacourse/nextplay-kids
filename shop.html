@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop All — Safety-Certified Kids Sports Gear | NextPlay Kids</title>
 <meta name="description" content="45+ products across 19 sports for ages 2–17. Filter by sport, age, skill level, price, safety certification and more.">
+<meta property="og:title" content="Shop All Gear — NextPlay Kids">
+<meta property="og:description" content="45+ safety-certified products across 19 sports for ages 2–17. Filter by sport, age, skill, price and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maheshkoriacourse.github.io/nextplay-kids/shop.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cinema.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<script>
+try{var t=localStorage.getItem('np_theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="np-glow" aria-hidden="true"></div>
+<div class="np-progress" aria-hidden="true"><i></i></div>
 <header id="site-header" class="site-header"></header>
-<main id="main" class="section" style="padding-top:48px">
+<main id="main" class="section" style="padding-top:0">
+<div class="np-page-head">
 <div class="container">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Shop</span></nav>
-  <div class="page-head" style="padding:0">
-    <span class="eyebrow">The full kit bag</span>
-    <h1 style="font-size:clamp(2rem,4vw,3rem)">Shop all gear</h1>
-    <p style="margin-top:12px;max-width:640px">Every item is safety-certified, age-true and parent-tested. Filter your way to the right kit.</p>
+  <div class="np-head-row">
+    <div class="page-head" style="padding:0">
+      <span class="np-ch"><b>The kit bag</b> Shop all gear</span>
+      <h1>Shop <span class="goldline">all gear</span></h1>
+      <p style="margin-top:12px;max-width:640px">Every item is safety-certified, age-true and parent-tested. Filter your way to the right kit.</p>
+    </div>
+    <div class="np-head-kpis" aria-hidden="true">
+      <div><b>45</b><span>products</span></div>
+      <div><b>19</b><span>sports</span></div>
+      <div><b>100%</b><span>safety-certified</span></div>
+    </div>
   </div>
+</div>
 </div>
 <div class="container" style="margin-top:40px">
   <div class="shop-layout">
@@ -88,6 +107,7 @@
 <script src="data.js"></script>
 <script src="app.js"></script>
 <script src="shop.js"></script>
+<script src="cinema.js"></script>
 <script>
 /* expose a reset hook for the empty state */
 window.ShopReset = function(){
