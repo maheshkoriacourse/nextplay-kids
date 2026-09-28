@@ -42,6 +42,18 @@
       var topic = $('#c-topic');
       if (topic && !topic.value) ok = false;
       if (!ok) { NP.toast('Please fix the highlighted fields'); return; }
+      // persist contact enquiries as waitlist rows (program = topic)
+      if (window.NPSupabase) {
+        var row = {
+          parent_name: ($('#c-name') && $('#c-name').value.trim()) || 'Contact form',
+          phone: ($('#c-phone') && $('#c-phone').value.trim()) || '',
+          program: topic ? topic.value : null,
+          child_name: null,
+          child_age: null,
+          city: 'Mumbai'
+        };
+        window.NPSupabase.insert('waitlist', row).catch(function () { /* silent: demo UX unaffected */ });
+      }
       $('#contact-done').style.display = '';
       f.style.display = 'none';
       NP.toast('✓ Message sent — we reply within 1 working day');

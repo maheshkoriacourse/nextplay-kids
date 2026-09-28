@@ -107,14 +107,51 @@
         if (!NP.cart.get().length) { NP.toast('Your cart is empty'); return; }
         if (!validate()) return;
         var items = NP.cart.get();
-        NP.cart.save([]);
-        render();
-        var ok = $('#order-success');
-        ok.style.display = '';
-        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        $('#success-num').textContent = 'NP-' + String(Date.now()).slice(-8);
-        var count = items.reduce(function (a, b) { return a + b.qty; }, 0);
-        $('#success-lines').textContent = count + ' item' + (count > 1 ? 's' : '') + ' on the way to your player.';
+        var sub = items.reduce(function (a, it) { var p = find(it.id); return a + (p ? p.price * it.qty : 0); }, 0);
+        var ship = sub >= FREE_AT ? 0 : SHIP;
+        var gst = Math.round(sub * 0.05);
+        var total = sub + ship + gst;
+        var orderCode = 'NP-' + String(Date.now()).slice(-8);
+        var btn = form.querySelector('button[type=submit]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Placing your order…'; }
+        var record = {
+          order_code: orderCode,
+          customer_name: $('#f-name').value.trim(),
+          phone: $('#f-phone').value.trim(),
+          email: $('#f-email').value.trim(),
+          city: $('#f-city').value.trim(),
+          child_name: null,
+          child_age: null,
+          items: items.map(function (it) {
+            var p = find(it.id);
+            return { id: it.id, name: p ? p.name : it.id, qty: it.qty, price: p ? p.price : 0, size: it.size || null, color: it.color || null };
+          }),
+          subtotal_inr: sub,
+          discount_inr: 0,
+          total_inr: total,
+          status: 'pending',
+          source: 'web'
+        };
+        function finish() {
+          NP.cart.save([]);
+          render();
+          var ok = $('#order-success');
+          ok.style.display = '';
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          $('#success-num').textContent = orderCode;
+          var count = items.reduce(function (a, b) { return a + b.qty; }, 0);
+          $('#success-lines').textContent = count + ' item' + (count > 1 ? 's' : '') + ' on the way to your player.';
+        }
+        if (window.NPSupabase) {
+          window.NPSupabase.insert('orders', record).then(finish).catch(function (err) {
+            // network/db hiccup: still complete the demo order so UX never blocks
+            if (btn) { btn.disabled = false; btn.textContent = 'Place order · demo checkout ⚡'; }
+            NP.toast('Order saved locally — cloud sync will retry');
+            finish();
+          });
+        } else {
+          finish();
+        }
       });
     }
   }

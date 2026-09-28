@@ -162,6 +162,21 @@
           '<a class="btn btn-sm" style="margin-left:auto" href="programs.html">View program →</a></div>';
       }
       App.refreshReveal(cards);
+      /* log quiz completion as a lead (answers + top recommendation) */
+      if (window.NPSupabase) {
+        window.NPSupabase.insert('quiz_leads', {
+          answers: {
+            age: a.age ? a.age.label : null,
+            interest: a.interest ? a.interest.label : null,
+            experience: a.exp ? a.exp.label : null,
+            time: a.time ? a.time.label : null,
+            budget: a.budget ? a.budget.label : null,
+            access: a.access ? a.access.label : null
+          },
+          recommended_sport: ranked.join(', '),
+          phone: null
+        }).catch(function () { /* silent */ });
+      }
     }
   }
 
