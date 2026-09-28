@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart &amp; Checkout — Parents Are Account Holders | NextPlay Kids</title>
+<meta name="description" content="Review your cart, edit quantities, enter delivery details and complete your NextPlay Kids order. Parents are account holders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Cart</span></nav>
+  <div class="page-head" style="padding:0">
+    <span class="eyebrow">Your kit bag</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">Cart &amp; checkout</h1>
+  </div>
+</div>
+
+<div class="container" style="margin-top:40px">
+  <div id="order-success" class="card success-panel" style="display:none">
+    <div class="tick" aria-hidden="true">✓</div>
+    <h2 style="font-size:1.6rem">Order confirmed! 🎉</h2>
+    <p style="margin-top:10px">Order <b id="success-num" style="color:var(--green)">NP-00000000</b> · <span id="success-lines">Your gear is on the way.</span></p>
+    <p style="margin-top:8px;font-size:.85rem">A confirmation is on its way to the account-holder email. Delivery in 1–2 days (Mumbai) or 3–6 days (rest of India).</p>
+    <div style="display:flex;gap:14px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+      <a class="btn" href="shop.html">Keep shopping</a>
+      <a class="btn btn-ghost" href="dashboard-parent.html">Track in dashboard</a>
+    </div>
+  </div>
+
+  <div id="cart-empty" class="empty-state" style="display:none">
+    <div class="glyph" aria-hidden="true">🛒</div>
+    <h3>Your kit bag is empty</h3>
+    <p style="margin:12px auto 20px;max-width:400px">Every champion starts with one piece of gear. Let’s find the first one.</p>
+    <a class="btn" href="shop.html">Browse the shop</a>
+    <a class="btn btn-ghost" style="margin-left:12px" href="explorer.html">Not sure? Take the quiz →</a>
+  </div>
+
+  <div class="cart-layout" id="cart-layout">
+    <div>
+      <div id="cart-items" style="display:flex;flex-direction:column;gap:16px"></div>
+      <div class="card" style="margin-top:24px">
+        <h2 style="font-size:1.2rem">🚚 Delivery details</h2>
+        <p style="font-size:.8rem;margin-top:4px">We deliver to homes, society offices or the ground gate — whichever you prefer.</p>
+        <form id="checkout-form" class="form-grid" style="margin-top:16px" novalidate>
+          <div class="field"><label for="f-name">Parent’s full name</label><input class="input" id="f-name" autocomplete="name" required><span class="err-msg">Please enter your name</span></div>
+          <div class="field"><label for="f-phone">Mobile number</label><input class="input" id="f-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10 digits" required><span class="err-msg">Enter a valid 10-digit Indian mobile</span></div>
+          <div class="field form-full"><label for="f-email">Email (order updates)</label><input class="input" id="f-email" type="email" autocomplete="email" required><span class="err-msg">Enter a valid email</span></div>
+          <div class="field form-full"><label for="f-address">Delivery address</label><textarea class="textarea" id="f-address" style="min-height:80px" required placeholder="Flat, building, street, landmark…"></textarea><span class="err-msg">Please add a full address (10+ characters)</span></div>
+          <div class="field"><label for="f-city">City</label><input class="input" id="f-city" value="Mumbai" autocomplete="address-level2" required><span class="err-msg">Enter your city</span></div>
+          <div class="field"><label for="f-pin">PIN code</label><input class="input" id="f-pin" inputmode="numeric" maxlength="6" autocomplete="postal-code" required><span class="err-msg">Enter a 6-digit PIN code</span></div>
+          <div class="form-full">
+            <h4 style="font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Payment method <span class="hint" style="text-transform:none;letter-spacing:0">(demo — no real charge)</span></h4>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <label class="pay-opt sel"><input type="radio" name="pay" checked> 💳 UPI / Card (demo)</label>
+              <div class="pay-opt"><input type="radio" name="pay"> 🏦 Net banking (demo)</div>
+              <div class="pay-opt"><input type="radio" name="pay"> 📦 Cash on delivery</div>
+            </div>
+          </div>
+          <div class="form-full">
+            <label class="check" style="align-items:flex-start"><input type="checkbox" id="f-consent" style="margin-top:3px">
+              <span style="font-size:.85rem">I confirm I am the <b>parent or guardian</b> placing this order, and I agree to the <a href="privacy.html">privacy policy</a> and <a href="safety.html#returns">return terms</a>.</span></label>
+          </div>
+          <div class="form-full"><button class="btn" type="submit" style="width:100%">Place order · demo checkout ⚡</button></div>
+        </form>
+      </div>
+    </div>
+
+    <aside class="card" id="cart-summary-wrap" style="position:sticky;top:90px" aria-label="Order summary">
+      <h2 style="font-size:1.15rem">Order summary</h2>
+      <div style="margin-top:14px">
+        <div class="summary-line"><span>Subtotal</span><b id="sum-sub">₹0</b></div>
+        <div class="summary-line"><span>Delivery</span><b id="sum-ship">₹0</b></div>
+        <div class="summary-line"><span>GST (5%)</span><b id="sum-gst">₹0</b></div>
+        <div class="summary-line summary-total"><span>Total</span><b id="sum-total">₹0</b></div>
+      </div>
+      <div class="note-box green" style="margin-top:16px"><b>🛡 Parents are account holders.</b> Orders, messages and consents are managed by you — kids enjoy the play, never the payment.</div>
+      <p style="font-size:.78rem;margin-top:14px">🚚 Free delivery over ₹1,999 · ↩️ 30-day returns · 📏 Free size exchange · This is a demo store — no real payments are processed and no card details are stored.</p>
+    </aside>
+  </div>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

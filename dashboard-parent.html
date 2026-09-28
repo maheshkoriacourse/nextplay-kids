@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parent Dashboard — Track Play, Book Programs | NextPlay Kids</title>
+<meta name="description" content="UI concept: manage child profiles, program bookings, training progress, consent settings, equipment reorders and coach messaging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section pd-dash" style="padding-top:24px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Parent Dashboard</span> <span class="badge badge-safe">Demo · sample data</span></nav>
+  <div class="dash-layout">
+    <aside class="dash-side" aria-label="Dashboard navigation">
+      <div class="who"><span class="quote-avatar" style="width:40px;height:40px" aria-hidden="true">👩</span><div><b style="font-size:.9rem">Meera K.</b><br><span style="font-size:.72rem;color:var(--muted)">Parent account holder</span></div></div>
+      <nav class="dash-nav" aria-label="Dashboard sections">
+        <a href="#overview" class="active">🏠 Overview</a>
+        <a href="#children">🧒 Child profiles</a>
+        <a href="#recommend">🎯 Recommended</a>
+        <a href="#bookings">📅 Program bookings</a>
+        <a href="#progress">📈 Training progress</a>
+        <a href="#reorder">🛒 Reorder equipment</a>
+        <a href="#messages">💬 Coach messages</a>
+        <a href="#consent">🛡 Consent &amp; privacy</a>
+      </nav>
+    </aside>
+    <div class="dash-main">
+      <div class="dash-head" id="overview">
+        <div><h1 style="font-size:clamp(1.5rem,2.6vw,2rem)">Good evening, Meera 👋</h1><p style="font-size:.85rem">Here’s how the week played for your squad.</p></div>
+        <div style="display:flex;gap:12px"><a class="btn btn-sm" href="programs.html">📅 Book a session</a><a class="btn btn-sm btn-ghost" href="shop.html">Shop gear</a></div>
+      </div>
+      <div class="stat-cards" data-stagger>
+        <div class="stat-card reveal"><b>4</b><span>sessions this week</span><span class="delta">▲ 1 vs last week</span></div>
+        <div class="stat-card reveal"><b>2</b><span>kids actively training</span><span class="delta">Football · Gymnastics</span></div>
+        <div class="stat-card reveal"><b>87%</b><span>avg attendance</span><span class="delta">▲ 5%</span></div>
+        <div class="stat-card reveal"><b>₹7,700</b><span>monthly program spend</span><span class="delta" style="color:var(--muted)">renews Nov 1</span></div>
+      </div>
+
+      <section class="card" id="children">
+        <h3>Child profiles</h3>
+        <div class="child-tabs" style="margin-top:14px" role="tablist" aria-label="Choose child">
+          <button class="child-tab sel" data-child="arjun" role="tab" aria-selected="true"><span class="av" style="background:var(--green-tint)" aria-hidden="true">⚽</span> Aarav, 9</button>
+          <button class="child-tab" data-child="zoya" role="tab" aria-selected="false"><span class="av" style="background:var(--orange-tint)" aria-hidden="true">🤸</span> Zoya, 6</button>
+        </div>
+        <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="note-box green"><b>Next up:</b> <span id="child-head">Aarav, 9 · Football</span><br><small style="color:var(--muted)">Wed 5:30 PM · Andheri Sports Complex · Coach Raj</small></div>
+          <div class="note-box"><b>Kit reminders:</b> shin guards (size M) + water bottle. Helmet re-fit check due this month — <a href="safety.html">measure guide</a>.</div>
+        </div>
+      </section>
+
+      <section class="card" id="recommend">
+        <h3>Recommended right now</h3>
+        <p style="font-size:.85rem;margin-top:4px">Sports your children’s coaches flagged as great next steps — tap to shop the sport.</p>
+        <div id="rec-sports" style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap"></div>
+        <div class="grid-3" id="rec-products" style="margin-top:18px"></div>
+      </section>
+
+      <section class="card" id="bookings">
+        <h3>Program bookings</h3>
+        <div class="table-wrap" style="margin-top:14px">
+        <table class="data">
+          <thead><tr><th>Child</th><th>Program</th><th>Schedule</th><th>Venue</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Aarav</td><td>⚽ Football Academy</td><td>Mon–Wed–Fri · 5:30 PM</td><td>Andheri</td><td class="pill-ok">Active</td><td><a class="btn btn-sm btn-ghost" href="programs.html">Manage</a></td></tr>
+            <tr><td>Zoya</td><td>🤸 Multi-Sport Starter</td><td>Sat–Sun · 9 AM</td><td>Powai</td><td class="pill-ok">Active</td><td><a class="btn btn-sm btn-ghost" href="programs.html">Manage</a></td></tr>
+            <tr><td>Aarav</td><td>🏊 Swim Level-2 (holiday)</td><td>Dec batch</td><td>Powai pool</td><td class="pill-warn">Waitlist</td><td><a class="btn btn-sm btn-ghost" href="camps.html">View</a></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="card" id="progress">
+        <h3>Training progress · <span id="child-head-progress" style="color:var(--green)">Aarav</span></h3>
+        <div class="bar-chart" id="progress-chart" style="margin-top:16px" role="img" aria-label="Weekly training progress bar chart"></div>
+        <h4 style="margin:18px 0 10px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Recent achievements</h4>
+        <div class="ach-row" id="ach-row"></div>
+      </section>
+
+      <section class="card" id="reorder">
+        <h3>Reorder what they’ve outgrown 💨</h3>
+        <p style="font-size:.85rem;margin-top:4px">One tap re-adds past favourites in the next size up.</p>
+        <div class="grid-3" id="reorder-grid" style="margin-top:16px"></div>
+      </section>
+
+      <section class="card" id="messages">
+        <h3>Coach messages</h3>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:4px">All messages are parent-approved and logged. Coaches can never contact your child directly.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:14px">
+          <div class="note-box green"><b>Coach Raj · Football Academy:</b> “Aarav’s left-foot control has jumped this month. Recommend the turf boots a half-size up before December — his current pair is snug.”</div>
+          <div class="note-box"><b>Coach Anita · Dojo:</b> “Zoya graded to yellow belt today! 🥋 Next grading window is in January.”</div>
+        </div>
+        <button class="btn btn-sm btn-ghost" style="margin-top:14px" onclick="NP.toast('Reply draft opened (demo)')">Reply to coach</button>
+      </section>
+
+      <section class="card" id="consent">
+        <h3>Consent &amp; privacy settings</h3>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:4px">You are the account holder. Every toggle below is yours to control — and kids can see what’s shared.</p>
+        <div style="margin-top:12px">
+          <div class="toggle-row"><div><b style="font-size:.9rem">Parental consent on file</b><p>Required for all programs &amp; sparring. Signed Jul 2026.</p></div><button class="toggle" role="switch" aria-checked="true" aria-label="Toggle parental consent"></button></div>
+          <div class="toggle-row"><div><b style="font-size:.9rem">Allow progress photos by coaches</b><p>Coaches may capture technique photos, reviewed before sharing with you.</p></div><button class="toggle" role="switch" aria-checked="true" aria-label="Toggle progress photos"></button></div>
+          <div class="toggle-row"><div><b style="font-size:.9rem">Coach messaging to parent</b><p>Coaches message you — never the child. All chats logged.</p></div><button class="toggle" role="switch" aria-checked="true" aria-label="Toggle coach messaging"></button></div>
+          <div class="toggle-row"><div><b style="font-size:.9rem">Data analytics for recommendations</b><p>Uses training data to suggest programs. Off = generic suggestions.</p></div><button class="toggle" role="switch" aria-checked="false" aria-label="Toggle analytics"></button></div>
+          <div class="toggle-row"><div><b style="font-size:.9rem">Marketing emails</b><p>Weekly play guide + camp alerts. Unsubscribe anytime.</p></div><button class="toggle" role="switch" aria-checked="true" aria-label="Toggle marketing email"></button></div>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap">
+          <a class="btn btn-sm btn-ghost" href="privacy.html">Full privacy policy</a>
+          <a class="btn btn-sm btn-ghost" href="child-safety.html">Child-safety policy</a>
+          <button class="btn btn-sm btn-danger" onclick="NP.toast('Data export requested (demo)')">Export my data</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script src="dash.js"></script>
+</body>
+</html>

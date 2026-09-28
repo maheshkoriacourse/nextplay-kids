@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — NextPlay Kids</title>
+<meta name="description" content="Safety-certified kids sports equipment with true-to-age sizing, fit guidance and parent reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <a href="shop.html">Shop</a> <span aria-hidden="true">/</span> <a href="shop.html" id="pd-crumb-sport">Sport</a></nav>
+  <div class="pd-layout">
+    <div class="pd-gallery">
+      <div class="pd-main-img load-in" id="pd-main" role="img" aria-label="Product image"><span aria-hidden="true">⚡</span></div>
+      <div class="pd-thumbs" id="pd-thumbs"></div>
+    </div>
+    <div>
+      <div class="p-meta" id="pd-cat" style="font-size:.82rem">Loading…</div>
+      <h1 id="pd-name" style="font-size:clamp(1.7rem,3vw,2.5rem);margin:8px 0">Product</h1>
+      <div class="rating"><span class="stars" id="pd-stars" aria-live="polite"></span> <span id="pd-age" class="badge badge-age"></span></div>
+      <div class="price-row" style="margin-top:16px">
+        <span class="price" id="pd-price" style="font-size:1.8rem">₹—</span>
+        <span class="price-old" id="pd-mrp"></span>
+        <span class="badge badge-safe" style="margin-left:8px">🛡 Certified gear</span>
+      </div>
+      <p id="pd-desc" style="margin-top:16px"></p>
+      <div class="opt-group">
+        <h4>Size <a class="size-link" href="safety.html#sizing">Size chart →</a></h4>
+        <div id="pd-sizes" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"></div>
+      </div>
+      <div class="opt-group">
+        <h4>Colour</h4>
+        <div id="pd-colors" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+      </div>
+      <div class="safety-box" id="pd-safety"></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn" id="pd-add" style="flex:1;min-width:180px">Add to Cart</button>
+        <button class="btn btn-orange" id="pd-buy" style="flex:1;min-width:160px">Buy Now ⚡</button>
+      </div>
+      <div class="meta-row" style="margin-top:20px">
+        <span>🚚 Free delivery over ₹1,999</span><span>↩️ 30-day easy returns</span><span>📏 Free size exchanges</span>
+      </div>
+      <div class="note-box" style="margin-top:20px" id="pd-notes-box">
+        <b>Play note:</b> <span id="pd-notes"></span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="pd-reviews-sec">
+    <div class="section-head reveal"><span class="eyebrow">From other parents</span><h2>Reviews</h2></div>
+    <div class="grid-2" id="pd-reviews" style="grid-template-columns:1fr 1fr;max-width:900px"></div>
+  </section>
+
+  <section class="section section-alt" style="border-radius:24px;padding:48px 32px">
+    <div class="section-head reveal"><span class="eyebrow">Goes well with</span><h2>Related gear</h2></div>
+    <div class="grid-4" id="pd-related" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))" data-stagger></div>
+  </section>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

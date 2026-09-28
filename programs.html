@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training &amp; Programs — Coaching Across Mumbai | NextPlay Kids</title>
+<meta name="description" content="Multi-sport starter classes, football/cricket/basketball academies, swimming, martial arts, inclusive sessions and teen development across Mumbai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Programs</span></nav>
+  <div class="page-head" style="padding:0">
+    <span class="eyebrow">Programs &amp; coaching</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">Coached by people who love kids’ sport</h1>
+    <p style="margin-top:12px;max-width:680px">Certified coaches, parent-approved ratios, and venues across Mumbai. Every program includes safety briefings, consent-first messaging and an effort-over-outcome culture.</p>
+  </div>
+  <div class="grid-3" id="prog-grid" style="margin-top:48px" data-stagger></div>
+</div>
+
+<section class="section section-alt" style="margin-top:64px;border-radius:24px">
+  <div class="container" style="padding:0">
+    <div class="cta-strip">
+      <div><span class="eyebrow">First session free</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Try before you commit</h2>
+        <p style="margin-top:10px;max-width:480px">Every program offers a free trial class with parental consent on arrival. Book online, meet the coach, watch your child light up.</p></div>
+      <a class="btn" href="contact.html">Book a free trial</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var root = document.getElementById('prog-grid');
+  root.innerHTML = window.NPD.PROGRAMS.map(function(g){
+    var h2=(g.tint+40)%360;
+    return '<article class="card prog-card reveal" id="'+g.id+'">' +
+      '<div class="p-img" style="height:120px;background:linear-gradient(135deg,hsl('+g.tint+' 70% 26%),hsl('+h2+' 80% 12%));font-size:2.8rem;border-radius:12px" role="img" aria-label="'+g.title+' illustration"><span aria-hidden="true">'+g.glyph+'</span></div>' +
+      '<h3 style="margin-top:14px">'+g.title+'</h3>' +
+      '<div class="meta-row" style="margin-top:8px"><span>🧒 '+g.age+'</span><span>🕐 '+g.when+'</span></div>' +
+      '<div class="meta-row" style="margin-top:4px"><span>📍 '+g.venue+'</span><span>👥 '+g.ratio+'</span></div>' +
+      '<p style="font-size:.88rem;margin-top:10px">'+g.desc+'</p>' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><span class="price">'+window.NPD.money(g.price)+'<small style="font-size:.7rem;color:var(--muted);font-weight:600"> /month</small></span>' +
+      '<a class="btn btn-sm" href="contact.html?book='+g.id+'">Book</a></div>' +
+      '</article>';
+  }).join('');
+  window.NPApp.refreshReveal(root);
+});
+</script>
+</body>
+</html>

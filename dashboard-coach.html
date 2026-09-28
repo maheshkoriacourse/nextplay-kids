@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach &amp; School Dashboard — Rosters, Attendance, Sessions | NextPlay Kids</title>
+<meta name="description" content="UI concept: roster management, attendance tracking, session scheduler, approved parent messaging, equipment inventory and training plan builder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:24px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Coach Portal</span> <span class="badge badge-safe">Demo · sample data</span></nav>
+  <div class="dash-layout">
+    <aside class="dash-side" aria-label="Dashboard navigation">
+      <div class="who"><span class="quote-avatar" style="width:40px;height:40px" aria-hidden="true">🧑‍🏫</span><div><b style="font-size:.9rem">Coach Raj</b><br><span style="font-size:.72rem;color:var(--muted)">Football Academy · Andheri</span></div></div>
+      <nav class="dash-nav" aria-label="Dashboard sections">
+        <a href="#roster" class="active">📋 Roster</a>
+        <a href="#attendance">✅ Attendance</a>
+        <a href="#scheduler">🗓 Session scheduler</a>
+        <a href="#updates">💬 Parent updates</a>
+        <a href="#inventory">📦 Equipment inventory</a>
+        <a href="#planner">📈 Training plan</a>
+        <a href="#bundles">🛒 Group bundles</a>
+      </nav>
+    </aside>
+    <div class="dash-main">
+      <div class="dash-head" id="roster">
+        <div><h1 style="font-size:clamp(1.5rem,2.6vw,2rem)">Football Academy · U-11 batch</h1><p style="font-size:.85rem">24 players · 3 sessions this week · next: Wed 5:30 PM</p></div>
+        <div style="display:flex;gap:12px"><button class="btn btn-sm" onclick="NP.toast('Session plan opened (demo)')">📋 Today’s plan</button></div>
+      </div>
+
+      <div class="stat-cards" data-stagger>
+        <div class="stat-card reveal"><b>24</b><span>active players</span><span class="delta">2 on waitlist</span></div>
+        <div class="stat-card reveal"><b>91%</b><span>avg attendance</span><span class="delta">▲ 3% this month</span></div>
+        <div class="stat-card reveal"><b>18</b><span>gear items issued</span><span class="delta" style="color:var(--muted)">3 due back</span></div>
+        <div class="stat-card reveal"><b>0</b><span>safeguarding flags</span><span class="delta">all consents ✓</span></div>
+      </div>
+
+      <section class="card" id="attendance">
+        <div class="dash-head"><h3>Today’s attendance · Mon session</h3><span class="p-meta">Marking open till 7 PM</span></div>
+        <div class="table-wrap" style="margin-top:14px">
+        <table class="data">
+          <thead><tr><th>Player</th><th>Age</th><th>Guardian consent</th><th>Attendance</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Aarav K.</td><td>9</td><td class="pill-ok">✓ On file</td><td><button class="btn btn-sm pill-ok" style="border:1px solid var(--green);background:var(--green-tint);color:var(--green)" onclick="NP.toast('Marked present (demo)')">Present</button></td><td>—</td></tr>
+            <tr><td>Kabir M.</td><td>10</td><td class="pill-ok">✓ On file</td><td><button class="btn btn-sm btn-ghost" onclick="NP.toast('Marked late (demo)')">Late</button></td><td>Turf boots half-size up</td></tr>
+            <tr><td>Vihaan N.</td><td>9</td><td class="pill-ok">✓ On file</td><td><button class="btn btn-sm btn-ghost" onclick="NP.toast('Marked absent (demo)')">Absent</button></td><td>Parent notified ✓</td></tr>
+            <tr><td>Aditi R.</td><td>11</td><td class="pill-ok">✓ On file</td><td><button class="btn btn-sm pill-ok" style="border:1px solid var(--green);background:var(--green-tint)" onclick="NP.toast('Marked present (demo)')">Present</button></td><td>Captain this week</td></tr>
+            <tr><td>Reyansh T.</td><td>8</td><td class="pill-warn">Renewal due</td><td><button class="btn btn-sm btn-ghost" onclick="NP.toast('Cannot mark — consent pending')">—</button></td><td>Consent reminder sent</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:10px">🛡 Sessions are blocked for any player without a guardian consent on file — automatically.</p>
+      </section>
+
+      <section class="card" id="scheduler">
+        <h3>Session scheduler</h3>
+        <div class="grid-3" style="margin-top:14px" data-stagger>
+          <div class="note-box green reveal"><b>Mon · 5:30–7 PM</b><br>Technical: passing + first touch<br><small>Andheri turf · 24/24 booked</small></div>
+          <div class="note-box reveal"><b>Wed · 5:30–7 PM</b><br>Small-sided games 4v4<br><small>Andheri turf · 22/24 booked</small></div>
+          <div class="note-box reveal"><b>Fri · 5:30–7 PM</b><br>Match day vs Powai U-11<br><small>Home · officials confirmed</small></div>
+        </div>
+        <button class="btn btn-sm btn-ghost" style="margin-top:14px" onclick="NP.toast('New session drafted (demo)')">+ Plan next session</button>
+      </section>
+
+      <section class="card" id="updates">
+        <h3>Parent updates <span class="badge badge-safe">Approved channel</span></h3>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:4px">Messages go to parents only — never to children. Word templates keep it quick; safeguarding words are auto-flagged.</p>
+        <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" onclick="NP.toast('Template opened (demo)')">📣 Match-day brief</button>
+          <button class="btn btn-sm btn-ghost" onclick="NP.toast('Template opened (demo)')">🏆 Achievement note</button>
+          <button class="btn btn-sm btn-ghost" onclick="NP.toast('Template opened (demo)')">🧢 Gear-size reminder</button>
+          <button class="btn btn-sm btn-ghost" onclick="NP.toast('Template opened (demo)')">🌧 Rain-plan update</button>
+        </div>
+        <div class="note-box green" style="margin-top:14px"><b>Draft preview:</b> “Parents — Friday match is ON. Players report 5 PM in full kit + shin guards. Hydration breaks every 15 min. Spectator zone opens 4:45 PM.”</div>
+      </section>
+
+      <section class="card" id="inventory">
+        <h3>Equipment inventory</h3>
+        <div class="table-wrap" style="margin-top:14px">
+        <table class="data">
+          <thead><tr><th>Item</th><th>Issued</th><th>In store</th><th>Condition</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>⚽ Size-4 match balls</td><td>8</td><td>7</td><td class="pill-ok">Good</td><td>—</td></tr>
+            <tr><td>🛡 Shin guard set (S/M)</td><td>14</td><td>6</td><td class="pill-warn">4 pairs worn</td><td><a class="btn btn-sm btn-ghost" href="shop.html?sport=Football">Reorder</a></td></tr>
+            <tr><td>🥅 Training bibs</td><td>20</td><td>18</td><td class="pill-ok">Good</td><td>—</td></tr>
+            <tr><td>🧯 First-aid kit</td><td>1</td><td>1</td><td class="pill-warn">Restock in 20 days</td><td><a class="btn btn-sm btn-ghost" href="contact.html">Request</a></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="card" id="planner">
+        <h3>Training plan builder · December block</h3>
+        <div class="bar-chart" style="margin-top:14px" role="img" aria-label="Planned weekly focus distribution">
+          <div class="bar-col"><b>40%</b><i style="height:40%"></i><small>Technical</small></div>
+          <div class="bar-col"><b>25%</b><i style="height:25%"></i><small>Tactics</small></div>
+          <div class="bar-col"><b>15%</b><i style="height:15%"></i><small>Conditioning</small></div>
+          <div class="bar-col"><b>10%</b><i style="height:10%"></i><small>Set pieces</small></div>
+          <div class="bar-col"><b>10%</b><i style="height:10%"></i><small>Match</small></div>
+        </div>
+        <p style="font-size:.8rem;margin-top:12px">Plans follow age-grade guidelines: max 2 contact sessions/week for U-11, hydration breaks built in, effort-based feedback in every debrief.</p>
+      </section>
+
+      <section class="card" id="bundles">
+        <h3>Group equipment bundles</h3>
+        <p style="font-size:.85rem;margin-top:4px">One-click bulk orders billed to the academy account — parents never handle group payments.</p>
+        <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <a class="btn btn-sm" href="schools.html">⚽ Team kit bundle</a>
+          <a class="btn btn-sm btn-ghost" href="schools.html">🥇 Tournament pack</a>
+          <a class="btn btn-sm btn-ghost" href="schools.html">🧯 Safety refill pack</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
