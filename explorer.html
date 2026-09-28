@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Explorer — Find Their Sport in 90 Seconds | NextPlay Kids</title>
+<meta name="description" content="Answer 6 friendly questions and get 3 personalised sport recommendations with reasons, starter gear and programs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Sports Explorer</span></nav>
+  <div class="page-head" style="padding:0;text-align:center;max-width:720px;margin:0 auto">
+    <span class="eyebrow" style="justify-content:center">Sports explorer</span>
+    <h1 style="font-size:clamp(2rem,4.4vw,3.2rem)">Find <em style="font-style:normal;color:var(--green)">their</em> sport</h1>
+    <p style="margin-top:12px">Six friendly questions about your child. We match them against 19 sports and hand you a starting point — not a verdict. Every child is more than a quiz.</p>
+  </div>
+  <div class="quiz-shell" id="xq-shell" style="margin-top:48px">
+    <div id="xq-quiz">
+      <div class="quiz-progress"><i id="xq-bar" style="width:0%"></i></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <span class="p-meta" id="xq-prog" aria-live="polite">Question 1 of 6</span>
+        <button class="btn btn-sm btn-ghost" id="xq-back" style="visibility:hidden">← Back</button>
+      </div>
+      <h2 class="quiz-q" id="xq-q" aria-live="polite">Loading…</h2>
+      <div class="quiz-opts" id="xq-opts"></div>
+    </div>
+    <div id="xq-results" style="display:none">
+      <div class="center" style="margin-bottom:24px">
+        <span style="font-size:2.6rem" aria-hidden="true">🎉</span>
+        <h2 style="font-size:1.6rem;margin-top:8px">Their top 3 matches</h2>
+        <p style="margin-top:8px">Based on your answers — start with matches they seem drawn to, not the “best” one.</p>
+        <div id="xq-summary" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px"></div>
+      </div>
+      <div class="grid-3" id="xq-cards" data-stagger></div>
+      <div class="card" style="margin-top:32px">
+        <h3 style="margin-bottom:12px">🎯 Recommended starter program</h3>
+        <div id="xq-program"></div>
+      </div>
+      <div style="margin-top:32px">
+        <h3 style="margin-bottom:14px">🛒 Starter bundle for match #1</h3>
+        <div class="grid-3" id="xq-bundle"></div>
+      </div>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+        <button class="btn btn-ghost" id="xq-restart">↻ Retake quiz</button>
+        <a class="btn" href="programs.html">Book a program</a>
+      </div>
+    </div>
+  </div>
+  <p class="center" style="margin-top:20px;font-size:.8rem;color:var(--muted)">Progress saves on this device as you go. Nothing about your child is shared — answers stay in your browser.</p>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script src="explorer.js"></script>
+</body>
+</html>

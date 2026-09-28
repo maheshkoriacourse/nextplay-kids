@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camps &amp; Events — Holiday Camps, Tournaments, Birthday Parties | NextPlay Kids</title>
+<meta name="description" content="Holiday camps, weekend tournaments, birthday sports parties and parent-child sessions across Mumbai. Dates, ages and booking for every event.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Camps &amp; Events</span></nav>
+  <div class="page-head" style="padding:0">
+    <span class="eyebrow">Camps &amp; events</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">The dates parents plan around</h1>
+    <p style="margin-top:12px;max-width:680px">Holiday camps, monthly tournaments, birthday parties and family play days — every event safety-staffed with certified first-aid on site.</p>
+  </div>
+  <div class="grid-3" id="camp-grid" style="margin-top:48px" data-stagger></div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="note-box green reveal" style="max-width:760px">
+      <b>🧒 Booking, the parent-first way:</b> Every booking is made by a parent or guardian account. Kids join the fun; parents control pickups, photo consent and emergency contacts. Sibling discounts apply automatically at checkout.
+    </div>
+  </div>
+</section>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var root = document.getElementById('camp-grid');
+  root.innerHTML = window.NPD.CAMPS.map(function(c){
+    var h2=(c.tint+40)%360;
+    return '<article class="card prog-card reveal">' +
+      '<div class="p-img" style="height:130px;background:linear-gradient(135deg,hsl('+c.tint+' 70% 26%),hsl('+h2+' 80% 12%));font-size:2.8rem;border-radius:12px" role="img" aria-label="'+c.title+' illustration"><span aria-hidden="true">'+c.glyph+'</span><span class="badge badge-orange" style="position:absolute;bottom:10px;right:10px;background:rgba(255,106,61,.9);color:#2A0D05">'+c.date+'</span></div>' +
+      '<h3 style="margin-top:14px">'+c.title+'</h3>' +
+      '<div class="meta-row" style="margin-top:8px"><span>🧒 '+c.age+'</span><span>🕐 '+c.when+'</span></div>' +
+      '<div class="meta-row" style="margin-top:4px"><span>📍 '+c.venue+'</span><span>🎟 '+c.seats+'</span></div>' +
+      '<p style="font-size:.88rem;margin-top:10px">'+c.desc+'</p>' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px"><span class="price">'+window.NPD.money(c.price)+'</span>' +
+      '<a class="btn btn-sm btn-orange" href="contact.html?book='+c.id+'">Book a spot</a></div>' +
+      '</article>';
+  }).join('');
+  window.NPApp.refreshReveal(root);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maheshkoriacourse.github.io/nextplay-kids/sitemap.xml

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All — Safety-Certified Kids Sports Gear | NextPlay Kids</title>
+<meta name="description" content="45+ products across 19 sports for ages 2–17. Filter by sport, age, skill level, price, safety certification and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Shop</span></nav>
+  <div class="page-head" style="padding:0">
+    <span class="eyebrow">The full kit bag</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">Shop all gear</h1>
+    <p style="margin-top:12px;max-width:640px">Every item is safety-certified, age-true and parent-tested. Filter your way to the right kit.</p>
+  </div>
+</div>
+<div class="container" style="margin-top:40px">
+  <div class="shop-layout">
+    <aside class="filters" aria-label="Product filters">
+      <div class="filter-group">
+        <h4>Sport</h4>
+        <div id="f-sports"></div>
+      </div>
+      <div class="filter-group">
+        <h4>Category</h4>
+        <div id="f-cats"></div>
+      </div>
+      <div class="filter-group">
+        <h4>Skill level</h4>
+        <select class="select" id="f-lvl" style="width:100%;border-radius:12px" aria-label="Filter by skill level">
+          <option value="All">All levels</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <h4>Max price · <output id="f-price-out" for="f-price" style="color:var(--green)">Up to ₹7,000</output></h4>
+        <input type="range" id="f-price" min="349" max="7000" step="50" value="7000" aria-label="Maximum price">
+      </div>
+      <div class="filter-group">
+        <h4>Safety &amp; use</h4>
+        <label class="check"><input type="checkbox" id="f-safe"> 🛡 Safety certified only</label>
+        <label class="check"><input type="checkbox" id="f-team"> 🏫 School / team use</label>
+        <label class="check"><input type="checkbox" id="f-eco"> ♻ Sustainable picks</label>
+        <select class="select" id="f-indoor" style="width:100%;border-radius:12px;margin-top:8px" aria-label="Indoor or outdoor">
+          <option value="All">Indoor + Outdoor</option>
+          <option value="indoor">🏠 Indoor only</option>
+          <option value="outdoor">🌤 Outdoor only</option>
+        </select>
+      </div>
+    </aside>
+    <div>
+      <div class="shop-toolbar">
+        <input class="search-input" id="shop-search" type="search" placeholder="Search gear, sports… (e.g. helmet)" aria-label="Search products">
+        <select class="select" id="shop-sort" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating">Highest rated</option>
+          <option value="new">Newest</option>
+        </select>
+        <span id="result-count" style="font-size:.82rem;color:var(--muted);font-weight:600" aria-live="polite"></span>
+      </div>
+      <div class="active-chips" id="active-chips"></div>
+      <div class="grid-3" id="shop-grid" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" style="display:none">
+        <div class="glyph" aria-hidden="true">🧢</div>
+        <h3>That kit bag is empty</h3>
+        <p style="margin:12px auto 20px;max-width:420px">No gear matches those filters — try widening the price range or picking a different sport.</p>
+        <button class="btn btn-ghost" onclick="window.ShopReset && window.ShopReset()">Clear all filters</button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script>
+/* expose a reset hook for the empty state */
+window.ShopReset = function(){
+  location.href = 'shop.html';
+};
+</script>
+</body>
+</html>

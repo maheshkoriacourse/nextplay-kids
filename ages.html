@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop by Age — Right Gear for Every Stage | NextPlay Kids</title>
+<meta name="description" content="Age-based gear and program recommendations for children 2–17, with developmental focus and safety notes for each stage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="site-header" class="site-header"></header>
+<main id="main" class="section" style="padding-top:48px">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Ages</span></nav>
+  <div class="page-head" style="padding:0">
+    <span class="eyebrow">Ages &amp; stages</span>
+    <h1 style="font-size:clamp(2rem,4vw,3rem)">The right stage beats the right age</h1>
+    <p style="margin-top:12px;max-width:680px">Gear and programs mapped to how children actually grow — with safety notes parents keep bookmarked.</p>
+  </div>
+  <div id="age-sections" style="margin-top:48px;display:flex;flex-direction:column;gap:64px"></div>
+</div>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<button class="back-top" aria-label="Back to top">↑</button>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="shop.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var root = document.getElementById('age-sections');
+  var notes = {
+    tiny: 'Everything is soft-edged and swallow-safe. An adult should be within arm’s reach for all water play — always.',
+    little: 'This is the golden window for fundamentals. Praise the attempt, not the outcome. Helmets from the first ride.',
+    rising: 'Real competition begins. Protective gear becomes non-negotiable (helmets, guards, pads) as speeds rise.',
+    young: 'Growth spurts change centre of gravity overnight — re-check shoe and guard sizes every school term.',
+    future: 'Add recovery habits (sleep, stretching) to training. Strength work is bodyweight-first with certified supervision.'
+  };
+  var progs = {
+    tiny: ['g1','g5'], little: ['g1','g8'], rising: ['g2','g3','g4'], young: ['g7','g11'], future: ['g11','g12']
+  };
+  var html = window.NPD.AGES.map(function(a, i){
+    var prods = window.NPD.PRODUCTS.filter(function(p){
+      return p.age[1] >= a.num[0] && p.age[0] <= a.num[1] && (p.cat==='A'||p.cat==='B'||p.cat==='C');
+    }).slice(0, 4);
+    var pl = progs[a.id].map(function(id){ return window.NPD.PROGRAMS.find(function(g){return g.id===id;}); });
+    return '<section class="reveal" id="'+a.id+'">' +
+      '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">' +
+      '<span style="font-size:2.6rem" aria-hidden="true">'+a.glyph+'</span>' +
+      '<div><span class="eyebrow">'+a.range+'</span><h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem)">'+a.label+'</h2></div>' +
+      '<a class="btn btn-sm" style="margin-left:auto" href="shop.html?q='+encodeURIComponent(a.label)+'">Shop this age →</a></div>' +
+      '<p style="max-width:720px">'+a.focus+'</p>' +
+      '<p style="font-size:.88rem;margin-top:6px"><b style="color:var(--text)">Sports that shine here:</b> '+a.sports+'</p>' +
+      '<div class="note-box" style="margin-top:14px"><b>🛡 Safety note:</b> '+notes[a.id]+'</div>' +
+      '<h3 style="margin:28px 0 14px">Recommended gear</h3>' +
+      '<div class="grid-4" data-stagger>'+prods.map(function(p){return window.NPApp.cardHTML(p);}).join('')+'</div>' +
+      '<h3 style="margin:28px 0 14px">Programs for this stage</h3>' +
+      '<div class="grid-3" data-stagger>'+pl.map(function(g){
+        return '<div class="card prog-card"><div style="display:flex;gap:12px;align-items:center"><span style="font-size:1.8rem" aria-hidden="true">'+g.glyph+'</span><div><h3 style="font-size:1rem">'+g.title+'</h3><div class="meta-row"><span>📍 '+g.venue+'</span><span>🕐 '+g.when+'</span></div></div></div><p style="font-size:.86rem;margin-top:10px">'+g.desc+'</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><b class="price">'+window.NPD.money(g.price)+'</b><a class="btn btn-sm" href="programs.html#'+g.id+'">Details</a></div></div>';
+      }).join('')+'</div>' +
+      '</section>';
+  }).join('');
+  root.innerHTML = html;
+  window.NPApp.refreshReveal(root);
+  window.NPApp.wireAdd(root);
+});
+</script>
+</body>
+</html>
